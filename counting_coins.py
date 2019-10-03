@@ -15,7 +15,7 @@ cv2.imshow("Image", image)
 edged = cv2.Canny(blurred, 30, 150)
 cv2.imshow("Edges", edged)
 
-(_, cnts, _) = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+(cnts, _) = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
 print("I count {} coins in this image".format(len(cnts)))
 
